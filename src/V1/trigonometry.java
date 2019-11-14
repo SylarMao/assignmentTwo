@@ -1,6 +1,5 @@
 package V1;
-
-public class trigonometry
+class trigonometry
 {
     public double sin(double degree)
     {
@@ -47,7 +46,7 @@ public class trigonometry
         return degree;
     }
 
-    public static class invalidInputException extends Exception
+    private static class invalidInputException extends Exception
     {
 
     }

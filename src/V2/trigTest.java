@@ -1,4 +1,4 @@
-package V1;
+package V2;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -163,5 +163,40 @@ class trigTest
         }
     }
 
+    @Test
+    void abs()
+    {
+        trigonometry a = new trigonometry();
+        for(int counter=0;counter<1000;counter++)
+        {
+            double number=Math.random()*2000;
+            number-=1000;
+            assertEquals(Math.abs(number),a.abs(number),0);
+        }
+    }
+
+    @Test
+    void factorial()
+    {
+        trigonometry a = new trigonometry();
+        double i = a.factorial(5);
+        assertEquals(5 * 4 * 3 * 2,i,0);
+    }
+
+
+
+    @Test
+    void pow()
+    {
+        trigonometry a = new trigonometry();
+        for(int counter=0;counter<1000;counter++)
+        {
+            double number=Math.random()*20;
+            number-=10;
+            int power = (int) (Math.random() * 20);
+            //System.out.println(number+" "+power);
+            assertEquals(Math.pow(number,power),a.pow(number,power),1E-15*Math.pow(10,Math.abs((int)a.pow(number,power)/10)+1));
+        }
+    }
 
 }
