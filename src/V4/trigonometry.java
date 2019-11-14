@@ -1,8 +1,9 @@
 package V4;
+
 class trigonometry
 {
     private final double pi = 3.141592653589793;
-    double sin(double degree)
+    public double sin(double degree)
     {
         double sum = 0;
         int sign = 1;
@@ -14,7 +15,7 @@ class trigonometry
         return sum;
     }
 
-    double cos(double degree)
+    public double cos(double degree)
     {
         double sum = 1;
         int sign = -1;
@@ -26,7 +27,7 @@ class trigonometry
         return sum;
     }
 
-    double tan(double degree)throws invalidInputException
+    public double tan(double degree)throws invalidInputException
     {
         if(abs(cos(degree))<1E-15)
         {
@@ -35,7 +36,7 @@ class trigonometry
         return sin(degree)/cos(degree);
     }
 
-    double arcsin(double sin) throws invalidInputException
+    public double arcsin(double sin) throws invalidInputException
     {
         if(abs(sin)>1)
         {
@@ -59,7 +60,7 @@ class trigonometry
         return sum;
     }
 
-    double arccos(double cos) throws invalidInputException
+    public double arccos(double cos) throws invalidInputException
     {
         if(abs(cos)>1)
         {
@@ -68,7 +69,7 @@ class trigonometry
         return pi/2-arcsin(cos);
     }
 
-    double arctan(double tan)
+    public double arctan(double tan)
     {
         if(abs(tan)<1)
         {
@@ -99,7 +100,7 @@ class trigonometry
         }
     }
 
-    double sec(double degree) throws invalidInputException
+    public double sec(double degree) throws invalidInputException
     {
         if(abs(cos(degree))<1E-15)
         {
@@ -108,7 +109,7 @@ class trigonometry
         return 1/cos(degree);
     }
 
-    double csc(double degree) throws invalidInputException
+    public double csc(double degree) throws invalidInputException
     {
         if(abs(sin(degree))<1E-15)
         {
@@ -117,7 +118,7 @@ class trigonometry
         return 1/sin(degree);
     }
 
-    double cot(double degree) throws invalidInputException
+    public double cot(double degree) throws invalidInputException
     {
         return 1/tan(degree);
     }
